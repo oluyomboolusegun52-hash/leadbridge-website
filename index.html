@@ -419,6 +419,42 @@ WhatsApp: +234 812 206 7370
 
 </footer>
 
+<script type="module">
+  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2'
 
+  const supabaseUrl = 'https://fhpxelmmdiokksfvqrwa.supabase.co'
+  cosb_publishable_nn1RT8NNzp9KTJOanz7d1g_rnCkbMWf
+  const supabase = createClient(supabaseUrl, supabaseKey)
+
+  const form = document.querySelector('form')
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault()
+
+    const formData = new FormData(form)
+    const name = formData.get('name')
+    const email = formData.get('email')
+    const phone = formData.get('phone')
+    const company = formData.get('company')
+    const message = formData.get('message')
+
+    const { error } = await supabase.from('leads').insert([
+      { 
+        status: 'New',
+notes: `Name: ${name} | Email: ${email} | Phone: ${phone} | Company: ${company} | Message: ${message}`
+
+
+          
+      }
+    ])
+
+    if (error) {
+      alert('Error: ' + error.message)
+    } else {
+      alert('Thanks! We got your lead. We will contact you.')
+      form.reset()
+    }
+  })
+</script>
 </body>
 </html>
