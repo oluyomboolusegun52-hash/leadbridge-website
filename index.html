@@ -441,7 +441,10 @@ WhatsApp: +234 812 206 7370
     const { error } = await supabase.from('leads').insert([
       { 
 status: 'New',
+
 notes: `Name: ${name} | Email: ${email} | Phone: ${phone} | Company: ${company} | Message: ${message}`
+
+
 
 
           
