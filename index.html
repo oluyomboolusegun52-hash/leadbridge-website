@@ -444,6 +444,13 @@ const { error } = await supabase.from('leads').insert([
            ` | Phone: ${phone} | Company: ${company}` + 
            ` | Message: ${message}`
   }
+      if (error) {
+      alert('Error: ' + error.message);
+    } else {
+      alert('Thanks! We got your lead. We will contact you soon.');
+      form.reset();
+    }
+    })
 ]);
 
 if (error) {
