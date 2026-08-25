@@ -437,32 +437,23 @@ WhatsApp: +234 812 206 7370
     const phone = formData.get('phone')
     const company = formData.get('company')
     const message = formData.get('message')
-
-    const { error } = await supabase.from('leads').insert([
+const { error } = await supabase.from('leads').insert([
   {
     status: 'New',
-    notes: `Name: ${name} | Email: ${email} | Phone: ${phone} | Company: ${company} | Message: ${message}`
+    notes: `Name: ${name} | Email: ${email}` + 
+           ` | Phone: ${phone} | Company: ${company}` + 
+           ` | Message: ${message}`
   }
 ]);
-             
-      }
-    ])
 
-    if (error) {
-      alert('Error: ' + error.message)
-    } else {
-      alert('Thanks! We got your lead. We will contact you.')
-      form.reset()
-    }
-  })
-  <!-- CONTACT FORM -->
-<form id="lead-form">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <input type="tel" name="phone" placeholder="Phone Number" required>
-  <input type="text" name="company" placeholder="Company">
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send Message</button>
+if (error) {
+  alert('Error: ' + error.message);
+} else {
+  alert('Thanks! We got your lead. We will contact you soon.');
+  form.reset();
+}
+})
+    
 </form>
 </script>
 </body>
