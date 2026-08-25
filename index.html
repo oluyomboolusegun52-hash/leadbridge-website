@@ -439,10 +439,15 @@ WhatsApp: +234 812 206 7370
     const message = formData.get('message')
 
     const { error } = await supabase.from('leads').insert([
-      { 
-status: 'New',
+  {
+    status: 'New',
+    notes: `Name: ${name} | Email: ${email} | Phone: ${phone} | Company: ${company} | Message: ${message}`
+  }
+]);
+      
 
-notes: `Name: ${name} | Email: ${email} | Phone: ${phone} | Company: ${company} | Message: ${message}`
+
+
 
 
 
