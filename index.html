@@ -3,63 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LeadBridge - B2B Lead Generation</title>
+  <title>LeadBridge - Premium B2B Lead Generation & Market Research</title>
+  <meta name="description" content="LeadBridge helps B2B companies get qualified leads and market insights. Data-driven lead generation for Africa and Global markets.">
+  
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
-    .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; }
-    .logo { color: #00B67A; font-size: 28px; font-weight: bold; }
-    .logo span { color: #333; }
-    input, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
-    button { background: #00B67A; color: white; padding: 14px 30px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; width: 100%; }
-    button:hover { background: #009d68; }
-    .whatsapp { text-align: center; margin-top: 20px; color: #555; }
-    .footer { text-align: center; margin-top: 40px; color: #888; font-size: 14px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { color: #333; line-height: 1.6; }
+    
+    /* COLORS */
+    :root {
+      --primary: #00B67A; /* Trustpilot Green */
+      --dark: #1A2B4C;
+      --light: #F8F9FA;
+      --white: #FFFFFF;
+    }
+    
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    
+    /* NAVBAR */
+    nav { background: var(--white); padding: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+    nav .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 26px; font-weight: 800; color: var(--primary); }
+    .logo span { color: var(--dark); }
+    .nav-btn { background: var(--primary); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 600; }
+    
+    /* HERO */
+    .hero { background: linear-gradient(135deg, var(--dark) 0%, #2c3e50 100%); color: white; padding: 100px 0; text-align: center; }
+    .hero h1 { font-size: 48px; margin-bottom: 20px; }
+    .hero p { font-size: 20px; margin-bottom: 30px; opacity: 0.9; }
+    .btn { background: var(--primary); color: white; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 18px; display: inline-block; border: none; cursor: pointer; }
+    .btn:hover { transform: translateY(-2px); }
+    
+    /* SECTIONS */
+    section { padding: 80px 0; }
+    .section-title { text-align: center; font-size: 36px; margin-bottom: 15px; color: var(--dark); }
+    .section-subtitle { text-align: center; color: #666; margin-bottom: 50px; }
+    
+    /* SERVICES */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .service-card { background: var(--white); padding: 40px 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.07); text-align: center; border-top: 4px solid var(--primary); }
+    .service-card h3 { color: var(--dark); margin-bottom: 15px; font-size: 22px; }
+    
+    /* ABOUT */
+    .about { background: var(--light); }
+    .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+    
+    /* FORM */
+    .contact { background: var(--dark); color: white; }
+    .form-box { background: white; padding: 40px; border-radius: 10px; color: #333; max-width: 700px; margin: 0 auto; }
+    .form-box input, .form-box textarea { width: 100%; padding: 14px; margin: 10px 0 20px 0; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; }
+    .form-box label { font-weight: 600; }
+    
+    /* FOOTER */
+    footer { background: #0d1726; color: white; text-align: center; padding: 40px 0; }
+    .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; padding: 15px 20px; border-radius: 50px; text-decoration: none; font-weight: 700; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+    
+    /* MOBILE */
+    @media(max-width: 768px) {
+      .hero h1 { font-size: 32px; }
+      .about-content { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <h1 class="logo">Lead<span>Bridge</span></h1>
-  <p>B2B Lead Generation & Market Research</p>
-  
-  <form>
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="tel" name="phone" placeholder="Phone Number">
-    <input type="text" name="company" placeholder="Company Name">
-    <textarea name="message" placeholder="Tell us about your project" rows="4"></textarea>
-    <button type="submit">Send Request</button>
-  </form>
-  
-  <p class="whatsapp">Or Chat on WhatsApp: <a href="https://wa.me/2348122067370">+234 812 206 7370</a></p>
-</div>
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <div class="logo">Lead<span>Bridge</span></div>
+    <a href="#contact" class="nav-btn">Get Leads</a>
+  </div>
+</nav>
 
-<div class="footer">
-  <h2 class="logo">Lead<span>Bridge</span></h2>
-  <p>© 2026 LeadBridge. All rights reserved.</p>
-</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>We Get You B2B Leads That Actually Buy</h1>
+    <p>Premium Lead Generation + Market Research for Companies in Africa & Globally</p>
+    <a href="#contact" class="btn">Book a Free Strategy Call</a>
+  </div>
+</section>
 
+<!-- SERVICES -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">Data-driven. Results-focused. No fluff.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>B2B Lead Generation</h3>
+        <p>We find decision-makers, CEOs, and procurement managers in your niche and get them to book calls with you.</p>
+      </div>
+      <div class="service-card">
+        <h3>Market Research</h3>
+        <p>Deep competitor analysis, pricing research, and market entry reports to help you win in new markets.</p>
+      </div>
+      <div class="service-card">
+        <h3>Lead Verification</h3>
+        <p>We clean and verify your existing database so you only call people who are real and relevant.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- SUPABASE CODE STARTS HERE -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-const SUPABASE_URL = 'https://fhpxelmmdiokksfvqrwa.supabase.co'
-const SUPABASE_ANON_KEY = 'sb_publishable_nn1RT8NNzp9KTJOanz7d1g_rnCkbMWf'
-
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
-
-const form = document.querySelector('form');
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const formData = new FormData(form);
-  
-  const { error } = await supabase.from('Leads').insert([{
-    Status: 'New',
-    Notes: `Name: ${formData.get('name')} | Email: ${formData.get('email')} | Phone: ${formData.get('phone')} | Company: ${formData.get('company')} | Message: ${formData.get('message')}`
-  }]);
-
-  if(error) { 
-    alert('Error: ' + error.message) 
-  } else { 
-    alert('Thanks! We got your lead. We will contact you soon.'); 
-    form.reset(); 
+<!-- ABOUT -->
+<section class="about">
+  <div class="container">
+    <div class="about-content">
+      <div>
+        <h2 class="section-title" style="text-align:left;">Why LeadBridge?</h2>
+        <p>We are not an agency. We are your growth partner. Based in Nigeria, serving clients globally. 
+        <br><br>We use verified data, manual research, and direct outreach to get you meetings with buyers, not just emails.
+        
