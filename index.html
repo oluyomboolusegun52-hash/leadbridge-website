@@ -156,25 +156,27 @@
 <p>© 2026 LeadBridge. All rights reserved.</p>
 </footer>
 
-<script type="module">
-  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2'
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = 'https://fhpxelmmdiokksfvqrwa.supabase.co'
+const SUPABASE_ANON_KEY = 'sb_publishable_nn1RT8NNzp9KTJOanz7d1g_rnCkbMWf'
 
-  const supabaseUrl = 'https://fhpxelmmdiokksfvqrwa.supabase.co'
-  const supabaseKey = 'sb_publishable_nn1RT8NNzp9KTJOanz7d1g_rnCkbMWf'
-  const supabase = createClient(supabaseUrl, supabaseKey)
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
-  const form = document.querySelector('form')
+const form = document.querySelector('form');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formData = new FormData(form);
+  
+  const { error } = await supabase.from('Leads').insert([{
+    Status: 'New',
+    Notes: `Name: ${formData.get('name')} | Email: ${formData.get('email')} | Phone: ${formData.get('phone')} | Company: ${formData.get('company')} | Message: ${formData.get('message')}`
+  }]);
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault()
-
-    const formData = new FormData(form)
-    const name = formData.get('name')
-    const email = formData.get('email')
-    const phone = formData.get('phone')
-    const company = formData.get('company')
-    const message = formData.get('message')
-
+  if(error) { alert('Error: ' + error.message) } 
+  else { alert('Thanks! We got your lead.'); form.reset(); }
+})
+</script>
     const { error } = await supabase.from('leads').insert([
       {
         status: 'New',
