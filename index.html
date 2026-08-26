@@ -122,35 +122,60 @@ document.getElementById('lead-form').addEventListener('submit', async (e) => {
   
   const data = {
     name: e.target.name.value,
-    email: e.target.email.value,
-    company: e.target.company.value,
-    leads_per_month: e.target.leads.value,
-    message: e.target.message.value,
+    
+</<script>
+// SUPABASE CONFIG
+const SUPABASE_URL = "https://hvksoryjldcbjapzzdrb.supabase.co"
+const SUPABASE_ANON_KEY = "sb_publishable_0W8D7FQqCivb_8TQ-xZoSw_CkcYRosC"
+
+document.getElementById('lead-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const statusEl = document.getElementById('form-status');
+  statusEl.innerText = "Sending...";
+  
+  // Combine all form data into "Notes" so it fits your table
+  const notes = `
+Name: ${e.target.name.value}
+Email: ${e.target.email.value}
+Company: ${e.target.company.value}
+Leads Needed: ${e.target.leads.value}
+Message: ${e.target.message.value}
+  `;
+  
+  const data = {
+    Notes: notes.trim(),
+    Status: 'New Lead',
     created_at: new Date().toISOString()
   };
   
-  const res = await fetch(`${SUPABASE_URL}/rest/v1/leads`, {
-    method: 'POST',
-    headers: {
-      'apikey': SUPABASE_ANON_KEY,
-      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-      'Content-Type': 'application/json',
-      'Prefer': 'return=minimal'
-    },
-    body: JSON.stringify(data)
-  });
-  
-  if(res.ok){
-    statusEl.style.color = "#22D3EE"
-    statusEl.innerText = "✅ Lead saved! We'll contact you in 24hrs";
-    e.target.reset();
-  } else {
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/Leads`, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify(data)
+    });
+    
+    if(res.ok){
+      statusEl.style.color = "#22D3EE"
+      statusEl.innerText = "✅ Lead saved! We'll contact you in 24hrs";
+      e.target.reset();
+    } else {
+      const err = await res.text()
+      statusEl.style.color = "red"
+      statusEl.innerText = "❌ Error. Please use WhatsApp button";
+      console.error(err)
+    }
+  } catch(err){
     statusEl.style.color = "red"
-    statusEl.innerText = "❌ Error. Please use WhatsApp button";
-    console.error(await res.text())
+    statusEl.innerText = "❌ Network error. Try again";
   }
 });
-</script>
+</script>>
 
 </body>
 </html>
