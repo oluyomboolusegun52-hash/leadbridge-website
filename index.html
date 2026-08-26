@@ -3,44 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LeadBridge | We Book You Qualified B2B Calls in 30 Days. Guaranteed.</title>
-<meta name="description" content="LeadBridge books qualified B2B sales calls for African SaaS & Agencies. Pay per booked call. 30-Day Guarantee.">
+<title>LeadBridge | B2B Lead Generation for Real Estate, Tech & Agencies</title>
+<meta name="description" content="We book qualified B2B sales calls for African Real Estate, Tech, SaaS & Digital Marketing companies. Pay per appointment.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial}
-  body{background:#0B0F19;color:#E5E7EB;line-height:1.6}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+  body{background:#0A0F1E;color:#E5E7EB;line-height:1.6}
   .container{max-width:1200px;margin:0 auto;padding:0 20px}
-  header{padding:20px 0;position:sticky;top:0;background:#0B0F19;z-index:100;border-bottom:1px solid #1F2937}
+  header{padding:20px 0;position:sticky;top:0;background:rgba(10,15,30,0.9);backdrop-filter:blur(10px);z-index:100;border-bottom:1px solid #1F2937}
   nav{display:flex;justify-content:space-between;align-items:center}
-  .logo{font-size:24px;font-weight:900;color:#22D3EE}
-  .nav-btn{padding:10px 20px;background:#22D3EE;color:#0B0F19;border-radius:8px;font-weight:700;text-decoration:none}
+  .logo{font-size:26px;font-weight:900;color:#38BDF8}
+  .nav-btn{padding:12px 24px;background:#38BDF8;color:#0A0F1E;border-radius:8px;font-weight:800;text-decoration:none}
   
-  .hero{padding:120px 0;text-align:center;background:radial-gradient(circle at 50% 20%, #1F2937 0%, #0B0F19 50%)}
-  .hero h1{font-size:56px;font-weight:900;margin-bottom:20px;line-height:1.1}
-  .hero h1 span{color:#22D3EE}
-  .hero p{font-size:20px;color:#9CA3AF;margin-bottom:40px;max-width:700px;margin-left:auto;margin-right:auto}
-  .btn{background:#22D3EE;color:#0B0F19;padding:18px 36px;border-radius:12px;font-weight:800;font-size:18px;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:0.3s}
-  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(34,211,238,0.3)}
+  .hero{padding:140px 0;text-align:center;background:linear-gradient(rgba(10,15,30,0.8), rgba(10,15,30,0.8)), url('https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2074') center/cover}
+  .hero h1{font-size:58px;font-weight:900;margin-bottom:20px;line-height:1.1}
+  .hero h1 span{color:#38BDF8}
+  .hero p{font-size:20px;color:#9CA3AF;margin-bottom:40px;max-width:700px;margin:auto}
+  .btn{background:#38BDF8;color:#0A0F1E;padding:18px 36px;border-radius:12px;font-weight:800;font-size:18px;border:none;cursor:pointer;text-decoration:none;display:inline-block;margin:10px;transition:0.3s}
+  .btn:hover{transform:translateY(-3px)}
+  .btn-green{background:#25D366;color:white}
   
   section{padding:100px 0}
-  .section-title{text-align:center;font-size:40px;font-weight:800;margin-bottom:20px}
+  .section-title{text-align:center;font-size:42px;font-weight:800;margin-bottom:20px}
   .section-sub{text-align:center;color:#9CA3AF;margin-bottom:60px;font-size:18px}
   
   .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
   .stat-card{background:#111827;padding:40px;border-radius:16px;border:1px solid #1F2937;text-align:center}
-  .stat-card h3{font-size:48px;color:#22D3EE;font-weight:900}
+  .stat-card h3{font-size:48px;color:#38BDF8;font-weight:900}
   
   .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-  .card{background:#111827;padding:30px;border-radius:16px;border:1px solid #1F2937}
-  .card h4{font-size:22px;margin-bottom:12px;color:#22D3EE}
+  .industry-card{background:#111827;border-radius:20px;overflow:hidden;border:1px solid #1F2937;transition:0.3s}
+  .industry-card:hover{transform:translateY(-5px);border-color:#38BDF8}
+  .industry-card img{width:100%;height:240px;object-fit:cover}
+  .industry-card-content{padding:30px}
+  .industry-card h4{font-size:24px;margin-bottom:12px;color:#38BDF8}
+  
+  .process{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+  .process-step{background:#111827;padding:30px;border-radius:16px}
+  .process-step h3{font-size:48px;color:#38BDF8;font-weight:900;margin-bottom:10px}
   
   .form-box{background:#111827;padding:50px;border-radius:20px;border:1px solid #1F2937;max-width:700px;margin:0 auto}
-  input,textarea,select{width:100%;padding:16px;margin-bottom:18px;background:#0B0F19;border:1px solid #374151;border-radius:10px;color:#E5E7EB;font-size:16px}
-  #form-status{margin-top:15px;font-weight:700;text-align:center}
+  input,textarea,select{width:100%;padding:16px;margin-bottom:18px;background:#0A0F1E;border:1px solid #374151;border-radius:10px;color:#E5E7EB;font-size:16px}
   
   footer{text-align:center;padding:50px 0;border-top:1px solid #1F2937;color:#6B7280}
-  .whatsapp{position:fixed;bottom:25px;right:25px;background:#25D366;color:white;padding:18px 24px;border-radius:50px;font-size:16px;text-decoration:none;font-weight:800;box-shadow:0 10px 30px rgba(37,211,102,0.3)}
+  .whatsapp{position:fixed;bottom:25px;right:25px;background:#25D366;color:white;padding:18px 24px;border-radius:50px;font-size:16px;text-decoration:none;font-weight:800;box-shadow:0 10px 30px rgba(37,211,102,0.3);z-index:999}
   
-  @media(max-width:768px){.hero h1{font-size:36px}.grid-3,.stats{grid-template-columns:1fr}}
+  @media(max-width:900px){.hero h1{font-size:36px}.grid-3,.stats,.process{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -55,8 +63,9 @@
 <section class="hero">
   <div class="container">
     <h1>We Book You <span>Qualified B2B Calls</span> in 30 Days. Guaranteed.</h1>
-    <p>Done-for-you lead generation for African SaaS & Agencies. You only pay for calls that show up. No retainers. No BS.</p>
+    <p>Done-for-you lead generation for African Real Estate, Tech, SaaS & Digital Marketing. You only pay for calls that show up. No retainers.</p>
     <a href="#contact" class="btn">Get 10 Free Leads This Week</a>
+    <a href="https://wa.me/2348122067370" class="btn btn-green" target="_blank">💬 WhatsApp Us</a>
   </div>
 </section>
 
@@ -72,110 +81,81 @@
 
 <section style="background:#111827">
   <div class="container">
-    <h2 class="section-title">How We Fill Your Calendar</h2>
-    <p class="section-sub">Our 3-step system that works for African B2B</p>
+    <h2 class="section-title">Industries We Serve</h2>
+    <p class="section-sub">Specialized B2B outreach that converts</p>
     <div class="grid-3">
-      <div class="card"><h4>1. Target</h4><p>We build you a list of 1000+ CEOs & Founders who actually need your service.</p></div>
-      <div class="card"><h4>2. Outreach</h4><p>Multi-channel: Email, LinkedIn, WhatsApp. 8 touchpoints in 14 days.</p></div>
-      <div class="card"><h4>3. Book</h4><p>Our closers book the call. You just show up and sell. We handle everything else.</p></div>
+      <div class="industry-card">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073" alt="Real Estate">
+        <div class="industry-card-content">
+          <h4>Real Estate Developers</h4>
+          <p>Book calls with property investors, diaspora buyers, and corporate tenants for luxury estates, commercial properties, and land sales.</p>
+        </div>
+      </div>
+      <div class="industry-card">
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070" alt="Technology">
+        <div class="industry-card-content">
+          <h4>Technology & SaaS</h4>
+          <p>Target CTOs, Founders & IT Directors. We book software demos with companies who have budget and need your solution now.</p>
+        </div>
+      </div>
+      <div class="industry-card">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015" alt="Digital Marketing">
+        <div class="industry-card-content">
+          <h4>Digital Marketing Agencies</h4>
+          <p>Fill your calendar with CEOs who need SEO, Paid Ads, and Web Design. Stop cold DMs. Start closing deals.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="contact">
+<section>
   <div class="container">
-    <h2 class="section-title">Get 10 Free Leads This Week</h2>
-    <p class="section-sub">No card needed. If we can't book you 10 calls, you pay nothing.</p>
+    <h2 class="section-title">How We Fill Your Calendar</h2>
+    <p class="section-sub">Our proven 4-step system for African B2B</p>
+    <div class="process">
+      <div class="process-step"><h3>1</h3><p><b>Target</b><br>Build 1000+ CEO & Founder list</p></div>
+      <div class="process-step"><h3>2</h3><p><b>Outreach</b><br>Email + LinkedIn + WhatsApp</p></div>
+      <div class="process-step"><h3>3</h3><p><b>Qualify</b><br>Our team books the call</p></div>
+      <div class="process-step"><h3>4</h3><p><b>Close</b><br>You just show up and sell</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:#111827">
+  <div class="container">
+    <h2 class="section-title">Book Your Free Strategy Call</h2>
+    <p class="section-sub">This sends directly to your email + WhatsApp. No waiting.</p>
     <div class="form-box">
-      <form id="lead-form">
+      <!-- THIS FORM EMAILS YOU DIRECTLY. NO SUPABASE -->
+      <form action="https://formsubmit.co/oluyomboolusegun52@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
         <input type="text" name="name" placeholder="Your Full Name" required>
         <input type="email" name="email" placeholder="Work Email" required>
         <input type="text" name="company" placeholder="Company Name" required>
+        <select name="industry" required>
+          <option value="">Which Industry Are You In?</option>
+          <option>Real Estate</option>
+          <option>Technology/SaaS</option>
+          <option>Digital Marketing</option>
+          <option>Other B2B</option>
+        </select>
         <select name="leads" required>
           <option value="">Leads Needed Per Month</option>
           <option>10-30</option><option>50+</option><option>100+</option>
         </select>
         <textarea name="message" rows="4" placeholder="What do you sell? Who is it for?"></textarea>
         <button type="submit" class="btn" style="width:100%">Book My Free Strategy Call</button>
-        <div id="form-status"></div>
       </form>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="container">© 2026 LeadBridge. Built for African B2B Growth.</div>
+  <div class="container">© 2026 LeadBridge. We Book Calls. You Close Deals.</div>
 </footer>
 
 <a href="https://wa.me/2348122067370" class="whatsapp" target="_blank">💬 WhatsApp Us</a>
-
-<script>
-// SUPABASE CONFIG
-const SUPABASE_URL = "https://hvksoryjldcbjapzzdrb.supabase.co"
-const SUPABASE_ANON_KEY = "sb_publishable_0W8D7FQqCivb_8TQ-xZoSw_CkcYRosC"
-
-document.getElementById('lead-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const statusEl = document.getElementById('form-status');
-  statusEl.style.color = "#9CA3AF"
-  statusEl.innerText = "Sending...";
-  
-  const data = {
-    name: e.target.name.value,
-    
-</<script>
-// SUPABASE CONFIG
-const SUPABASE_URL = "https://hvksoryjldcbjapzzdrb.supabase.co"
-const SUPABASE_ANON_KEY = "sb_publishable_0W8D7FQqCivb_8TQ-xZoSw_CkcYRosC"
-
-document.getElementById('lead-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const statusEl = document.getElementById('form-status');
-  statusEl.innerText = "Sending...";
-  
-  // Combine all form data into "Notes" so it fits your table
-  const notes = `
-Name: ${e.target.name.value}
-Email: ${e.target.email.value}
-Company: ${e.target.company.value}
-Leads Needed: ${e.target.leads.value}
-Message: ${e.target.message.value}
-  `;
-  
-  const data = {
-    Notes: notes.trim(),
-    Status: 'New Lead',
-    created_at: new Date().toISOString()
-  };
-  
-  try {
-    const res = await fetch(`${SUPABASE_URL}/rest/v1/Leads`, {
-      method: 'POST',
-      headers: {
-        'apikey': SUPABASE_ANON_KEY,
-        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-        'Content-Type': 'application/json',
-        'Prefer': 'return=minimal'
-      },
-      body: JSON.stringify(data)
-    });
-    
-    if(res.ok){
-      statusEl.style.color = "#22D3EE"
-      statusEl.innerText = "✅ Lead saved! We'll contact you in 24hrs";
-      e.target.reset();
-    } else {
-      const err = await res.text()
-      statusEl.style.color = "red"
-      statusEl.innerText = "❌ Error. Please use WhatsApp button";
-      console.error(err)
-    }
-  } catch(err){
-    statusEl.style.color = "red"
-    statusEl.innerText = "❌ Network error. Try again";
-  }
-});
-</script>>
 
 </body>
 </html>
