@@ -105,3 +105,14 @@ input:focus{outline:none;border-color:#38bdf8}
   <input type="hidden" name="_next" value="/leadbridge-website/thanks.html">
   <button type="submit">Book My Free Strategy Call</button>
 </form>
+</section>
+
+  <script>
+  const form = document.querySelector('form');
+  form.addEventListener('submit', function() {
+    setTimeout(function() {
+      window.location.href = '/leadbridge-website/thanks.html';
+    }, 1000);
+  });
+  </script>
+
