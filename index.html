@@ -96,19 +96,13 @@ input:focus{outline:none;border-color:#38bdf8}
   </div>
 </section>
   <!-- FAQ --><section style="background:#0f172a;padding:80px 20px;border-top:1px solid #1e293b"><div class="container" style="max-width:800px;margin:0 auto"><h2 style="text-align:center;font-size:36px;margin-bottom:50px;color:#fff">Frequently Asked Questions</h2><div style="display:flex;flex-direction:column;gap:20px"><div style="background:#1e293b;padding:25px;border-radius:12px;border-left:4px solid #38bdf8"><h3 style="color:#fff;font-size:18px;margin-bottom:10px">1. Do you guarantee results?</h3><p style="color:#94a3b8;line-height:1.6">Yes. We work on a 30-day sprint. If we don't book you at least 5 qualified calls, we work for free until we do.</p></div><div style="background:#1e293b;padding:25px;border-radius:12px;border-left:4px solid #22c55e"><h3 style="color:#fff;font-size:18px;margin-bottom:10px">2. How much does it cost?</h3><p style="color:#94a3b8;line-height:1.6">We have 3 packages starting from $1,500/month. Book a call and we'll recommend the best one for your business.</p></div><div style="background:#1e293b;padding:25px;border-radius:12px;border-left:4px solid #fbbf24"><h3 style="color:#fff;font-size:18px;margin-bottom:10px">3. What kind of businesses do you work with?</h3><p style="color:#94a3b8;line-height:1.6">B2B service businesses: Agencies, SaaS, Coaches, Consultants, and B2B SaaS. If you sell to other businesses, we can help.</p></div><div style="background:#1e293b;padding:25px;border-radius:12px;border-left:4px solid #a855f7"><h3 style="color:#fff;font-size:18px;margin-bottom:10px">4. How fast will I see results?</h3><p style="color:#94a3b8;line-height:1.6">Most clients get their first qualified call in 7-14 days. We aim for 5+ calls in 30 days.</p></div></div></div></section>
-<!-- FORM -->
-<section id="form" class="container" style="padding:60px 20px; text-align:center; background:#0f172a;">
-  <h2 class="section-title" style="color:#fff;">Book Your 10 Free Leads</h2>
-  <p style="color:#ccc;">Fill this form and we’ll send you leads + book a strategy call</p>
+<form action="https://formspree.io/f/mbgjrvpr" method="POST">
+  <input type="text" name="company" placeholder="Company Name" required>
+  <input type="email" name="email" placeholder="Work Email" required>
+  <input type="text" name="industry" placeholder="Industry">
   
-  <form action="https://formspree.io/f/mbgjrvpr" method="POST" style="max-width:500px; margin:20px auto;">
-    <input type="text" name="company" placeholder="Company Name" required style="width:100%; padding:12px; margin:8px 0; border-radius:6px; border:1px solid #333;">
-    <input type="email" name="email" placeholder="Work Email" required style="width:100%; padding:12px; margin:8px 0; border-radius:6px; border:1px solid #333;">
-    <input type="text" name="industry" placeholder="Industry" style="width:100%; padding:12px; margin:8px 0; border-radius:6px; border:1px solid #333;">
-    
-    <!-- REDIRECT AFTER SUBMIT -->
-    <input type="hidden" name="_next" value="https://2-hash.github.io/thanks.html">
-    
-    <button type="submit" style="width:100%; padding:14px; background:#fbbf24; border:none; border-radius:6px; font-weight:bold; font-size:16px; cursor:pointer; color:#000;">Book My Free Strategy Call</button>
-  </form>
-</section>
+  <!-- THIS LINE MAKES THE REDIRECT -->
+  <input type="hidden" name="_next" value="https://2-hash.github.io/thanks.html">
+  
+  <button type="submit">Book My Free Strategy Call</button>
+</form>
