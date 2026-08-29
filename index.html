@@ -1,169 +1,146 @@
-‎<!DOCTYPE html>
-‎<html lang="en">
-‎<head>
-‎<meta charset="UTF-8">
-‎<meta name="viewport" content="width=device-width, initial-scale=1.0">
-‎<title>LeadBridge - #1 B2B Lead Generation for Africa</title>
-‎<style>
-‎div[style*="position: fixed"]{display:none!important}
-‎*{margin:0;padding:0;box-sizing:border-box}
-‎body{margin:0;background:#0a0f1e;color:white;font-family:'Segoe UI',Arial,sans-serif;line-height:1.6}
-‎.container{max-width:1200px;margin:auto;padding:20px}
-‎.btn{background:linear-gradient(135deg,#38bdf8,#0ea5e9);color:#000;padding:16px 32px;border-radius:10px;text-decoration:none;font-weight:bold;display:inline-block;border:none;font-size:16px;cursor:pointer;transition:0.3s}
-‎.btn:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(56,189,248,0.3)}
-‎header{display:flex;justify-content:space-between;align-items:center;padding:20px;background:rgba(10,15,30,0.9);position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
-‎.card{background:#1e293b;padding:30px;border-radius:16px;margin-bottom:20px;border:1px solid #334155}
-‎.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
-‎.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
-‎input{width:100%;padding:14px;margin:10px 0;background:#0f172a;border:2px solid #334155;color:white;border-radius:8px;font-size:16px}
-‎input:focus{outline:none;border-color:#38bdf8}
-‎.hero{background:linear-gradient(180deg,#0a0f1e 0%,#111827 100%);padding:120px 20px;text-align:center}
-‎.stat-number{font-size:56px;color:#38bdf8;font-weight:800}
-‎.section-title{font-size:36px;text-align:center;margin-bottom:50px}
-‎/* POPUP */
-‎#popup{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:999;align-items:center;justify-content:center}
-‎#popup-box{background:#1e293b;padding:40px;border-radius:20px;text-align:center;max-width:400px;border:2px solid #38bdf8}
-‎#popup-box h3{color:#38bdf8;font-size:24px;margin-bottom:15px}
-‎</style>
-‎</head>
-‎<body>
-‎
-‎<header>
-‎  <h1 style="font-size:32px;font-weight:900;margin:0;background:linear-gradient(135deg,#38bdf8,#0ea5e9);-webkit-background-clip:text;-webkit-text-fill-color:transparent">LeadBridge</h1>
-‎  </a>
-‎</header>
-‎
-‎<div style="text-align: center; padding: 40px 20px;">
-‎<img src="./oluyombo.jpg" alt="Oluyombo" style="width:200px; height:200px; border-radius:50%; object-fit:cover; border:4px solid #2563eb; display:block; margin:30px auto;">
-‎  <section style="padding:60px 20px; background:#f8f9ff; margin-top:40px; border-radius:20px;">
-‎  <h2 style="color:#0f172a;">Our Services</h2>
-‎  <p style="text-align:center; color:#666; margin-bottom:40px;">We book calls so you can close deals</p>
-‎  
-‎  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; max-width:1000px; margin:0 auto;">
-‎    
-‎    <!-- Package 1 -->
-‎    <div style="background:white; padding:30px; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.08);">
-‎      <h3 style="font-size:20px; margin-bottom:10px;">Starter</h3>
-‎      <p style="font-size:36px; font-weight:800; color:#4A6FFF;">₦150k</p>
-‎      <p style="color:#666; margin:15px 0;">Perfect for testing</p>
-‎      <ul style="list-style:none; padding:0; color:#333;">
-‎        <li>✓ 50 Qualified Leads</li>
-‎        <li>✓ 10+ Calls Booked</li>
-‎        <li>✓ 30 Days Support</li>
-‎      </ul>
-‎      <a href="https://wa.me/2348122067370" target="_blank" class="btn" style="display:block; text-align:center; margin-top:20px;">Get Started</a>
-‎    </div>
-‎
-‎    <!-- Package 2 - Popular -->
-‎    <div style="background:white; padding:30px; border-radius:15px; box-shadow:0 4px 20px rgba(74,111,255,0.3); border:2px solid #4A6FFF; position:relative;">
-‎      <span style="position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:#4A6FFF; color:white; padding:5px 15px; border-radius:20px; font-size:12px; font-weight:700;">MOST POPULAR</span>
-‎      <h3 style="font-size:20px; margin-bottom:10px;">Growth</h3>
-‎      <p style="font-size:36px; font-weight:800; color:#4A6FFF;">₦350k</p>
-‎      <p style="color:#666; margin:15px 0;">For serious businesses</p>
-‎      <ul style="list-style:none; padding:0; color:#333;">
-‎        <li>✓ 150 Qualified Leads</li>
-‎        <li>✓ 30+ Calls Booked</li>
-‎        <li>✓ WhatsApp + Email Outreach</li>
-‎        <li>✓ Weekly Reports</li>
-‎      </ul>
-‎      <a href="https://wa.me/2348122067370" target="_blank" class="btn" style="display:block; text-align:center; margin-top:20px;">Get Started</a>
-‎    </div>
-‎
-‎    <!-- Package 3 -->
-‎    <div style="background:white; padding:30px; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.08);">
-‎      <h3 style="font-size:20px; margin-bottom:10px;">Scale</h3>
-‎      <p style="font-size:36px; font-weight:800; color:#4A6FFF;">₦750k</p>
-‎      <p style="color:#666; margin:15px 0;">For agencies & teams</p>
-‎      <ul style="list-style:none; padding:0; color:#333;">
-‎        <li>✓ 500 Qualified Leads</li>
-‎        <li>✓ 100+ Calls Booked</li>
-‎        <li>✓ Full CRM Setup</li>
-‎        <li>✓ Dedicated Account Manager</li>
-‎      </ul>
-‎      <a href="https://wa.me/2348122067370" target="_blank" class="btn" style="display:block; text-align:center; margin-top:20px;">Get Started</a>
-‎    </div>
-‎
-‎  </div>
-‎</section>
-‎  
-‎  <h2 style="margin-top: 20px;">Oluyombo</h2>
-‎  <p style="font-size: 18px; color: #555; max-width: 600px; margin: 10px auto;">
-‎    Founder of LeadBridge. Helping businesses get more customers with smart digital solutions.
-‎  </p>
-‎</div>
-‎
-‎<!-- STATS -->
-‎<section class="container grid-3">
-‎  <div class="card" style="text-align:center"><div class="stat-number">150+</div><p style="color:#94a3b8;font-size:18px">Calls Booked</p></div>
-‎  <div class="card" style="text-align:center"><div class="stat-number">30 Day</div><p style="color:#94a3b8;font-size:18px">To First Call</p></div>
-‎  <div class="card" style="text-align:center"><div class="stat-number">$2.4M</div><p style="color:#94a3b8;font-size:18px">Client Revenue</p></div>
-‎</section>
-‎
-‎<!-- INDUSTRIES WITH ICONS -->
-‎<section style="background:#111827;padding:100px 20px">
-‎  <div class="container">
-‎    <h2 class="section-title">Industries We Serve</h2>
-‎    <div class="grid-3">
-‎      <div class="card">
-‎        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400" style="width:100%;border-radius:12px;margin-bottom:15px;">
-‎        <h3 style="color:#38bdf8;font-size:22px">🏢 Real Estate Developers</h3>
-‎        <p>Book calls with property investors, diaspora buyers, and corporate tenants.</p>
-‎      </div>
-‎      <div class="card">
-‎        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400" style="width:100%;border-radius:12px;margin-bottom:15px;">
-‎        <h3 style="color:#38bdf8;font-size:22px">💻 Technology Companies</h3>
-‎        <p>Target CTOs, Founders & IT Directors for SaaS and IT Services.</p>
-‎      </div>
-‎      <div class="card">
-‎        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=400" style="width:100%;border-radius:12px;margin-bottom:15px;">
-‎        <h3 style="color:#38bdf8;font-size:22px">📈 Digital Marketing Agencies</h3>
-‎        <p>Get meetings with CEOs who need lead gen, not other agencies.</p>
-‎      </div>
-‎    </div>
-‎  </div>
-‎</section>
-‎
-‎<!-- HOW IT WORKS -->
-‎<section class="container" style="padding:100px 20px">
-‎  <h2 class="section-title">How We Fill Your Calendar</h2>
-‎  <div class="grid-4">
-‎    <div class="card" style="text-align:center"><div style="font-size:48px;color:#38bdf8;font-weight:bold">1</div><b style="font-size:18px">Target</b><p>Build 1000+ CEO List</p></div>
-‎    <div class="card" style="text-align:center"><div style="font-size:48px;color:#38bdf8;font-weight:bold">2</div><b style="font-size:18px">Outreach</b><p>Email + LinkedIn + WhatsApp</p></div>
-‎    <div class="card" style="text-align:center"><div style="font-size:48px;color:#38bdf8;font-weight:bold">3</div><b style="font-size:18px">Qualify</b><p>Our team books the calls</p></div>
-‎    <div class="card" style="text-align:center"><div style="font-size:48px;color:#38bdf8;font-weight:bold">4</div><b style="font-size:18px">Close</b><p>You just show up and sell</p></div>
-‎  </div>
-‎</section>
-‎  
-‎<!-- STATS COUNTER --><section style="background:#0f172a;padding:60px 20px;border-bottom:1px solid #1e293b"><div class="container" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;text-align:center;max-width:1000px;margin:0 auto"><div><div style="font-size:48px;font-weight:900;color:#38bdf8;margin-bottom:10px">247+</div><div style="color:#cbd5e1;font-size:16px">Calls Booked</div></div><div><div style="font-size:48px;font-weight:900;color:#22c55e;margin-bottom:10px">18+</div><div style="color:#cbd5e1;font-size:16px">B2B Clients</div></div><div><div style="font-size:48px;font-weight:900;color:#fbbf24;margin-bottom:10px">30</div><div style="color:#cbd5e1;font-size:16px">Days to Results</div></div></div></section>
-‎<!-- TESTIMONIALS -->
-‎<section style="background:#111827;padding:100px 20px">
-‎  <div class="container">
-‎    <h2 class="section-title">What Our Clients Say</h2>
-‎    <div class="card">
-‎      <p style="color:#fbbf24;font-size:20px">★★★★★</p>
-‎      <p style="font-size:18px;font-style:italic">"LeadBridge got us 23 qualified B2B meetings in 30 days. We closed 4 deals worth $18,000."</p>
-‎      <b>Adebayo T.</b> - <span style="color:#94a3b8">CEO, TechPro Solutions</span>
-‎    </div>
-‎  </div>
-‎</section>
-‎  <!-- FAQ --><section style="background:#0f172a;padding:80px 20px;border-top:1px solid #1e293b"><div class="container" style="max-width:800px;margin:0 auto"><h2 style="text-align:center;font-size:36px;margin-bottom:50px;color:#fff">Frequently Asked Questions</h2><div style="display:flex;flex-direction:column;gap:20px"><div style="background:#1e293b;padding:25px;border-radius:12px;border-left:4px solid #38bdf8"><h3 style="color:#fff;font-size:18px;margin-bottom:10px">1. Do you guarantee results?</h3><p style="color:#94a3b8;line-height:1.6">Yes. We work on a 30-day sprint. If we don't book you at least 5 qualified calls, we work for free until we do.</p></div><div style="background:#1e293b;padding:25px;border-radius:12px;border-left:4px solid #22c55e"><h3 style="color:#fff;font-size:18px;margin-bottom:10px">2. How much does it cost?</h3><p style="color:#94a3b8;line-height:1.6">We have 3 packages starting from $1,500/month. Book a call and we'll recommend the best one for your business.</p></div><div style="background:#1e293b;padding:25px;border-radius:12px;border-left:4px solid #fbbf24"><h3 style="color:#fff;font-size:18px;margin-bottom:10px">3. What kind of businesses do you work with?</h3><p style="color:#94a3b8;line-height:1.6">B2B service businesses: Agencies, SaaS, Coaches, Consultants, and B2B SaaS. If you sell to other businesses, we can help.</p></div><div style="background:#1e293b;padding:25px;border-radius:12px;border-left:4px solid #a855f7"><h3 style="color:#fff;font-size:18px;margin-bottom:10px">4. How fast will I see results?</h3><p style="color:#94a3b8;line-height:1.6">Most clients get their first qualified call in 7-14 days. We aim for 5+ calls in 30 days.</p></div></div></div></section>
-‎<form action="https://formspree.io/f/mbgjrvpr" method="POST">
-‎  <input type="text" name="company" placeholder="Company Name" required>
-‎  <input type="email" name="email" placeholder="Work Email" required>
-‎  <input type="text" name="industry" placeholder="Industry">
-‎  
-‎  <!-- THIS LINE MAKES THE REDIRECT -->
-‎  <input type="hidden" name="_next" value="/leadbridge-website/thanks.html">
-‎  <button type="submit" style="background:#4A6FFF; color:white; padding:15px; border:none; border-radius:10px; width:100%; font-weight:700; font-size:16px; margin-top:15px; cursor:pointer;">Book My Free Strategy Call</button>
-‎</form>
-‎</section>
-‎
-‎  <script>
-‎  const form = document.querySelector('form');
-‎  form.addEventListener('submit', function() {
-‎    setTimeout(function() {
-‎      window.location.href = '/leadbridge-website/thanks.html';
-‎    }, 1000);
-‎  });
-‎  </script>
-‎
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LeadBridge - B2B Lead Generation for Africa | Book 30+ Calls in 30 Days</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{margin:0;background:#0a0f1e;color:#e2e8f0;font-family:'Segoe UI',Arial,sans-serif;line-height:1.7}
+.container{max-width:1200px;margin:auto;padding:20px}
+.btn{background:linear-gradient(135deg,#38bdf8,#0ea5e9);color:#000;padding:18px 36px;border-radius:12px;text-decoration:none;font-weight:800;display:inline-block;border:none;font-size:17px;cursor:pointer;transition:all 0.3s;box-shadow:0 4px 15px rgba(56,189,248,0.2)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(56,189,248,0.4)}
+.btn-outline{background:transparent;color:#38bdf8;border:2px solid #38bdf8}
+.btn-outline:hover{background:#38bdf8;color:#000}
+header{display:flex;justify-content:space-between;align-items:center;padding:25px 40px;background:rgba(10,15,30,0.8);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);border-bottom:1px solid #1e293b}
+.card{background:#111827;padding:35px;border-radius:20px;margin-bottom:20px;border:1px solid #1e293b;transition:all 0.3s}
+.card:hover{transform:translateY(-5px);border-color:#38bdf8;box-shadow:0 10px 40px rgba(56,189,248,0.1)}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px}
+input{width:100%;padding:16px;margin:12px 0;background:#0f172a;border:2px solid #1e293b;color:white;border-radius:10px;font-size:16px}
+input:focus{outline:none;border-color:#38bdf8}
+.hero{padding:140px 20px;text-align:center;background:radial-gradient(circle at 50% 50%, #1e293b 0%, #0a0f1e 70%)}
+.hero h1{font-size:52px;font-weight:900;margin-bottom:20px;background:linear-gradient(135deg,#38bdf8,#0ea5e9);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:20px;color:#94a3b8;max-width:700px;margin:0 auto 40px}
+.section{padding:100px 20px}
+.section-title{font-size:42px;text-align:center;margin-bottom:20px;font-weight:900}
+.section-subtitle{text-align:center;color:#94a3b8;font-size:18px;margin-bottom:60px;max-width:600px;margin-left:auto;margin-right:auto}
+.stat-number{font-size:60px;color:#38bdf8;font-weight:900}
+.badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#38bdf8,#0ea5e9);color:#000;padding:8px 20px;border-radius:30px;font-size:13px;font-weight:900;letter-spacing:0.5px}
+</style>
+</head>
+<body>
+
+<header>
+  <h1 style="font-size:32px;font-weight:900;background:linear-gradient(135deg,#38bdf8,#0ea5e9);-webkit-background-clip:text;-webkit-text-fill-color:transparent">LeadBridge</h1>
+  <a href="#book" class="btn" style="padding:12px 24px;font-size:15px">Book a Call</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>We Book Sales Calls For B2B Companies</h1>
+  <p>Stop chasing leads. Our team books 30+ qualified calls with CEOs and Decision Makers in 30 days. You just show up and close.</p>
+  <div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap">
+    <a href="https://wa.me/2348122067370" target="_blank" class="btn">Get Started on WhatsApp</a>
+    <a href="#services" class="btn btn-outline">See Pricing</a>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section" style="background:#111827">
+  <div class="container grid-3" style="text-align:center">
+    <div><div class="stat-number">247+</div><p style="color:#94a3b8;font-size:18px">Calls Booked</p></div>
+    <div><div class="stat-number">18+</div><p style="color:#94a3b8;font-size:18px">B2B Clients</p></div>
+    <div><div class="stat-number">14 Days</div><p style="color:#94a3b8;font-size:18px">To First Call</p></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">We book calls so you can close deals. Pick the package that fits your growth stage.</p>
+    
+    <div class="grid-3">
+      <!-- Starter -->
+      <div class="card">
+        <h3 style="font-size:24px;margin-bottom:10px;">Starter</h3>
+        <p style="font-size:42px;font-weight:900;color:#38bdf8;">₦150k</p>
+        <p style="color:#94a3b8;margin:15px 0;">Perfect for testing</p>
+        <ul style="list-style:none;padding:0;color:#cbd5e1;">
+          <li>✓ 50 Qualified Leads</li>
+          <li>✓ 10+ Calls Booked</li>
+          <li>✓ 30 Days Support</li>
+          <li>✓ Email Outreach</li>
+        </ul>
+        <a href="https://wa.me/2348122067370" target="_blank" class="btn" style="display:block;text-align:center;margin-top:25px;width:100%">Get Started</a>
+      </div>
+
+      <!-- Growth -->
+      <div class="card" style="border:2px solid #38bdf8;position:relative;box-shadow:0 0 40px rgba(56,189,248,0.2)">
+        <span class="badge">MOST POPULAR</span>
+        <h3 style="font-size:24px;margin-bottom:10px;">Growth</h3>
+        <p style="font-size:42px;font-weight:900;color:#38bdf8;">₦350k</p>
+        <p style="color:#94a3b8;margin:15px 0;">For serious businesses</p>
+        <ul style="list-style:none;padding:0;color:#cbd5e1;">
+          <li>✓ 150 Qualified Leads</li>
+          <li>✓ 30+ Calls Booked</li>
+          <li>✓ WhatsApp + Email + LinkedIn</li>
+          <li>✓ Weekly Reports</li>
+          <li>✓ Landing Page Setup</li>
+        </ul>
+        <a href="https://wa.me/2348122067370" target="_blank" class="btn" style="display:block;text-align:center;margin-top:25px;width:100%">Get Started</a>
+      </div>
+
+      <!-- Scale -->
+      <div class="card">
+        <h3 style="font-size:24px;margin-bottom:10px;">Scale</h3>
+        <p style="font-size:42px;font-weight:900;color:#38bdf8;">₦750k</p>
+        <p style="color:#94a3b8;margin:15px 0;">For agencies & teams</p>
+        <ul style="list-style:none;padding:0;color:#cbd5e1;">
+          <li>✓ 500 Qualified Leads</li>
+          <li>✓ 100+ Calls Booked</li>
+          <li>✓ Full CRM Setup</li>
+          <li>✓ Dedicated Account Manager</li>
+          <li>✓ Custom Strategy</li>
+        </ul>
+        <a href="https://wa.me/2348122067370" target="_blank" class="btn" style="display:block;text-align:center;margin-top:25px;width:100%">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" style="background:#111827">
+  <div class="container">
+    <h2 class="section-title">How We Fill Your Calendar</h2>
+    <div class="grid-4">
+      <div class="card" style="text-align:center"><div style="font-size:56px;color:#38bdf8;font-weight:900">1</div><b style="font-size:20px">Target</b><p style="color:#94a3b8">Build 1000+ CEO List</p></div>
+      <div class="card" style="text-align:center"><div style="font-size:56px;color:#38bdf8;font-weight:900">2</div><b style="font-size:20px">Outreach</b><p style="color:#94a3b8">Email + LinkedIn + WhatsApp</p></div>
+      <div class="card" style="text-align:center"><div style="font-size:56px;color:#38bdf8;font-weight:900">3</div><b style="font-size:20px">Qualify</b><p style="color:#94a3b8">Our team books the calls</p></div>
+      <div class="card" style="text-align:center"><div style="font-size:56px;color:#38bdf8;font-weight:900">4</div><b style="font-size:20px">Close</b><p style="color:#94a3b8">You just show up and sell</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section id="book" class="section">
+  <div class="container" style="max-width:600px;text-align:center">
+    <h2 class="section-title">Book Your Free Strategy Call</h2>
+    <p class="section-subtitle">Let's see if we can book you 10+ calls in the next 30 days</p>
+    <form action="https://formspree.io/f/mbgjrvpr" method="POST" style="text-align:left">
+      <input type="text" name="company" placeholder="Company Name" required>
+      <input type="email" name="email" placeholder="Work Email" required>
+      <input type="text" name="industry" placeholder="Industry">
+      <input type="hidden" name="_next" value="https://oluyomboolusegun52-hash.github.io/thanks.html">
+      <button type="submit" class="btn" style="width:100%;margin-top:20px">Book My Free Strategy Call</button>
+    </form>
+  </div>
+</section>
+
+<footer style="text-align:center;padding:40px;border-top:1px solid #1e293b;color:#64748b">
+  <p>© 2026 LeadBridge. Helping African B2B companies grow.</p>
+</footer>
+
+</body>
+                                                                      </html>
