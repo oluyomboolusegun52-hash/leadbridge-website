@@ -23,10 +23,17 @@ input:focus{outline:none;border-color:#38bdf8}
 .hero h1{font-size:52px;font-weight:900;margin-bottom:20px;background:linear-gradient(135deg,#38bdf8,#0ea5e9);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero p{font-size:20px;color:#94a3b8;max-width:700px;margin:0 auto 40px}
 .section{padding:100px 20px}
+.section-dark{background:#0a0f1e}
+.section-light{background:#f8fafc;color:#0a0f1e}
 .section-title{font-size:42px;text-align:center;margin-bottom:20px;font-weight:900}
+.section-light .section-title{color:#0a0f1e}
 .section-subtitle{text-align:center;color:#94a3b8;font-size:18px;margin-bottom:60px;max-width:600px;margin-left:auto;margin-right:auto}
+.section-light .section-subtitle{color:#64748b}
 .stat-number{font-size:60px;color:#38bdf8;font-weight:900}
 .badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#38bdf8,#0ea5e9);color:#000;padding:8px 20px;border-radius:30px;font-size:13px;font-weight:900;letter-spacing:0.5px}
+.testimonial{background:#1e293b;padding:35px;border-radius:16px;border-left:4px solid #38bdf8}
+.section-light .testimonial{background:white;border:1px solid #e2e8f0;border-left:4px solid #0ea5e9}
+.contact-box{background:#111827;padding:30px;border-radius:16px;text-align:center;border:1px solid #1e293b}
 </style>
 </head>
 <body>
@@ -41,13 +48,13 @@ input:focus{outline:none;border-color:#38bdf8}
   <h1>We Book Sales Calls For B2B Companies</h1>
   <p>Stop chasing leads. Our team books 30+ qualified calls with CEOs and Decision Makers in 30 days. You just show up and close.</p>
   <div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap">
-    <a href="https://wa.me/2348122067370" target="_blank" class="btn">Get Started on WhatsApp</a>
+    <a href="https://wa.me/2348122067370" target="_blank" class="btn">WhatsApp: 0812 206 7370</a>
     <a href="#services" class="btn btn-outline">See Pricing</a>
   </div>
 </section>
 
 <!-- STATS -->
-<section class="section" style="background:#111827">
+<section class="section section-dark" style="background:#111827">
   <div class="container grid-3" style="text-align:center">
     <div><div class="stat-number">247+</div><p style="color:#94a3b8;font-size:18px">Calls Booked</p></div>
     <div><div class="stat-number">18+</div><p style="color:#94a3b8;font-size:18px">B2B Clients</p></div>
@@ -56,18 +63,17 @@ input:focus{outline:none;border-color:#38bdf8}
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="section">
+<section id="services" class="section section-light">
   <div class="container">
-    <h2 class="section-title">Our Services</h2>
+    <h2 class="section-title">Our Service Packages</h2>
     <p class="section-subtitle">We book calls so you can close deals. Pick the package that fits your growth stage.</p>
     
     <div class="grid-3">
-      <!-- Starter -->
       <div class="card">
         <h3 style="font-size:24px;margin-bottom:10px;">Starter</h3>
-        <p style="font-size:42px;font-weight:900;color:#38bdf8;">₦150k</p>
-        <p style="color:#94a3b8;margin:15px 0;">Perfect for testing</p>
-        <ul style="list-style:none;padding:0;color:#cbd5e1;">
+        <p style="font-size:42px;font-weight:900;color:#0ea5e9;">₦150k</p>
+        <p style="color:#64748b;margin:15px 0;">Perfect for testing</p>
+        <ul style="list-style:none;padding:0;color:#334155;line-height:2">
           <li>✓ 50 Qualified Leads</li>
           <li>✓ 10+ Calls Booked</li>
           <li>✓ 30 Days Support</li>
@@ -76,13 +82,12 @@ input:focus{outline:none;border-color:#38bdf8}
         <a href="https://wa.me/2348122067370" target="_blank" class="btn" style="display:block;text-align:center;margin-top:25px;width:100%">Get Started</a>
       </div>
 
-      <!-- Growth -->
-      <div class="card" style="border:2px solid #38bdf8;position:relative;box-shadow:0 0 40px rgba(56,189,248,0.2)">
+      <div class="card" style="border:2px solid #0ea5e9;position:relative">
         <span class="badge">MOST POPULAR</span>
         <h3 style="font-size:24px;margin-bottom:10px;">Growth</h3>
-        <p style="font-size:42px;font-weight:900;color:#38bdf8;">₦350k</p>
-        <p style="color:#94a3b8;margin:15px 0;">For serious businesses</p>
-        <ul style="list-style:none;padding:0;color:#cbd5e1;">
+        <p style="font-size:42px;font-weight:900;color:#0ea5e9;">₦350k</p>
+        <p style="color:#64748b;margin:15px 0;">For serious businesses</p>
+        <ul style="list-style:none;padding:0;color:#334155;line-height:2">
           <li>✓ 150 Qualified Leads</li>
           <li>✓ 30+ Calls Booked</li>
           <li>✓ WhatsApp + Email + LinkedIn</li>
@@ -92,12 +97,11 @@ input:focus{outline:none;border-color:#38bdf8}
         <a href="https://wa.me/2348122067370" target="_blank" class="btn" style="display:block;text-align:center;margin-top:25px;width:100%">Get Started</a>
       </div>
 
-      <!-- Scale -->
       <div class="card">
         <h3 style="font-size:24px;margin-bottom:10px;">Scale</h3>
-        <p style="font-size:42px;font-weight:900;color:#38bdf8;">₦750k</p>
-        <p style="color:#94a3b8;margin:15px 0;">For agencies & teams</p>
-        <ul style="list-style:none;padding:0;color:#cbd5e1;">
+        <p style="font-size:42px;font-weight:900;color:#0ea5e9;">₦750k</p>
+        <p style="color:#64748b;margin:15px 0;">For agencies & teams</p>
+        <ul style="list-style:none;padding:0;color:#334155;line-height:2">
           <li>✓ 500 Qualified Leads</li>
           <li>✓ 100+ Calls Booked</li>
           <li>✓ Full CRM Setup</li>
@@ -111,7 +115,7 @@ input:focus{outline:none;border-color:#38bdf8}
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="section" style="background:#111827">
+<section class="section section-dark" style="background:#111827">
   <div class="container">
     <h2 class="section-title">How We Fill Your Calendar</h2>
     <div class="grid-4">
@@ -123,11 +127,44 @@ input:focus{outline:none;border-color:#38bdf8}
   </div>
 </section>
 
-<!-- BOOKING FORM -->
-<section id="book" class="section">
-  <div class="container" style="max-width:600px;text-align:center">
+<!-- TESTIMONIALS -->
+<section class="section section-light">
+  <div class="container">
+    <h2 class="section-title">What Our Clients Say</h2>
+    <p class="section-subtitle">Real results from real B2B companies in Africa</p>
+    <div class="grid-3">
+      <div class="testimonial">
+        <p style="color:#fbbf24;font-size:20px;margin-bottom:10px">★★★</p>
+        <p style="font-style:italic;margin:15px 0;font-size:16px">"LeadBridge got us 23 qualified B2B meetings in 30 days. We closed 4 deals worth $18,000."</p>
+        <b>Adebayo T.</b> - <span style="color:#64748b">CEO, TechPro Solutions</span>
+      </div>
+      <div class="testimonial">
+        <p style="color:#fbbf24;font-size:20px;margin-bottom:10px">★★★</p>
+        <p style="font-style:italic;margin:15px 0;font-size:16px">"From zero to 12 sales calls in 2 weeks. Their team is professional and delivers on time."</p>
+        <b>Fatima K.</b> - <span style="color:#64748b">Founder, GrowthLabs</span>
+      </div>
+      <div class="testimonial">
+        <p style="color:#fbbf24;font-size:20px;margin-bottom:10px">★★★</p>
+        <p style="font-style:italic;margin:15px 0;font-size:16px">"Best investment we made. The leads are high quality and actually show up to calls."</p>
+        <b>Emeka O.</b> - <span style="color:#64748b">Director, SaaS Africa</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING FORM + CONTACT -->
+<section id="book" class="section section-dark">
+  <div class="container" style="max-width:700px;text-align:center">
     <h2 class="section-title">Book Your Free Strategy Call</h2>
     <p class="section-subtitle">Let's see if we can book you 10+ calls in the next 30 days</p>
+    
+    <div class="contact-box" style="margin-bottom:40px">
+      <h3 style="color:#38bdf8;margin-bottom:15px">Or Contact Me Directly</h3>
+      <p style="font-size:18px;margin:10px 0">📱 <b>Phone/WhatsApp:</b> <a href="https://wa.me/2348122067370" style="color:#38bdf8;text-decoration:none">0812 206 7370</a></p>
+      <p style="font-size:18px;margin:10px 0">📧 <b>Email 1:</b> <a href="mailto:oluyomboolusegun52@gmail.com" style="color:#38bdf8;text-decoration:none">oluyomboolusegun52@gmail.com</a></p>
+      <p style="font-size:18px;margin:10px 0">📧 <b>Email 2:</b> <a href="mailto:oluyomboolusegun97@gmail.com" style="color:#38bdf8;text-decoration:none">oluyomboolusegun97@gmail.com</a></p>
+    </div>
+
     <form action="https://formspree.io/f/mbgjrvpr" method="POST" style="text-align:left">
       <input type="text" name="company" placeholder="Company Name" required>
       <input type="email" name="email" placeholder="Work Email" required>
@@ -138,9 +175,10 @@ input:focus{outline:none;border-color:#38bdf8}
   </div>
 </section>
 
-<footer style="text-align:center;padding:40px;border-top:1px solid #1e293b;color:#64748b">
-  <p>© 2026 LeadBridge. Helping African B2B companies grow.</p>
+<footer style="text-align:center;padding:40px;border-top:1px solid #1e293b;color:#64748b;background:#0a0f1e">
+  <p>📱 0812 206 7370 | 📧 oluyomboolusegun52@gmail.com | 📧 oluyomboolusegun97@gmail.com</p>
+  <p style="margin-top:10px">© 2026 LeadBridge. Helping African B2B companies grow.</p>
 </footer>
 
 </body>
-                                                                      </html>
+  </html>
