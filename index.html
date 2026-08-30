@@ -165,16 +165,33 @@ input:focus{outline:none;border-color:#38bdf8}
       <p style="font-size:18px;margin:10px 0">📧 <b>Email 2:</b> <a href="mailto:oluyomboolusegun97@gmail.com" style="color:#38bdf8;text-decoration:none">oluyomboolusegun97@gmail.com</a></p>
     </div>
 
-    <form action="https://formspree.io/f/mbgjrvpr" method="POST">
-  <input type="text" name="company" placeholder="Company Name" required>
-  <input type="email" name="email" placeholder="Work Email" required>
-  <input type="text" name="industry" placeholder="Industry">
-  
-  <input type="hidden" name="_subject" value="New Lead from LeadBridge Website">
-  <input type="hidden" name="_next" value="https://oluyomboolusegun52-hash.github.io/thanks.html">
+    <form id="leadForm" style="text-align:left">
+  <input type="text" id="company" name="company" placeholder="Company Name" required>
+  <input type="email" id="email" name="email" placeholder="Work Email" required>
+  <input type="text" id="industry" name="industry" placeholder="Industry">
   
   <button type="submit" class="btn" style="width:100%;margin-top:20px">Book My Free Strategy Call</button>
 </form>
+
+<script>
+document.getElementById('leadForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const formData = {
+    company: document.getElementById('company').value,
+    email: document.getElementById('email').value,
+    industry: document.getElementById('industry').value
+  };
+  
+  await fetch('https://formspree.io/f/mbgjrvpr', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(formData)
+  });
+  
+  window.location.href = 'https://oluyomboolusegun52-hash.github.io/thanks.html';
+});
+</script>
   </div>
 </section>
 
